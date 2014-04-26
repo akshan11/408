@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE customer SYSTEM "datadtd.dtd">
+
+<customer>
+	<name>
+  		<first>John</first>
+  		<last>Smith</last>
+	</name>
+	<company>Stony Brook University</company>
+	<address>
+	    <street1>100 Circle Road</street1>
+	    <street2>SBU</street2>
+	    <city>Stony Brook</city>
+	    <zip>11790</zip>
+	    <state>
+	        <NewYork>&NewYork;</NewYork>
+	    </state>
+	    <country>
+	        <US>&US;</US>
+	    </country>
+	</address>
+	<phonenumber>
+	    <day>6316811111</day>
+	    <evening>6316812222</evening>
+	    <mobile>6316813333</mobile>
+	</phonenumber>
+	<birthday>
+	    <mm>05</mm>
+	    <dd>11</dd>
+	    <yyyy>1992</yyyy>
+	</birthday>
+	<email_addr>john.smith@stonybrook.edu</email_addr>
+	<email_opt>
+	    <checked>&checked;</checked>
+	</email_opt>
+	<how_many>
+	    <zero>&more_1;</zero>
+	</how_many>
+	<more_info>
+	    <group>
+	        <checked>&checked;</checked>
+	    </group>
+	    <season>
+	        <checked>&unchecked;</checked>
+	    </season>
+	    <ticket_plans>
+	        <checked>&checked;</checked>
+	    </ticket_plans>
+	    <individual>
+	        <checked>&unchecked;</checked>
+	    </individual>
+	</more_info>
+	<how_contact>
+	    <email>&email;</email>
+	</how_contact>
+	<comments>No Comments</comments>
+</customer>

@@ -1,0 +1,291 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>Mets Ticket Information Request Form</title>
+
+<link type="text/css" rel="stylesheet" href="./Mets Ticket Information Request Form   mets.com  Tickets_files/global.css">
+<link type="text/css" rel="stylesheet" href="./Mets Ticket Information Request Form   mets.com  Tickets_files/global2.css" >
+<link type="text/css" rel="stylesheet" href="./Mets Ticket Information Request Form   mets.com  Tickets_files/customCSS.css" >
+
+<script type="text/javascript" src="jquery-2.0.0.js"></script> 
+<script type="text/javascript" language="javascript">
+$(document).ready(function() 
+{
+	$("#email_addr").keyup(function(event) 
+	{
+		var queryString = $("#email_addr").prop("value");
+		var url = "http://localhost:8080/CSE336_Assignment_7/ValidationServlet?input1=" + queryString;
+		$("#email_error").load(url);
+	});
+});
+
+$(document).ready(function() 
+{
+	$("#bill_fname").keyup(function(event) 
+	{
+		var queryString = $("#bill_fname").prop("value");
+		var url = "http://localhost:8080/CSE336_Assignment_7/ValidationServlet?input2=" + queryString;
+		$("#fname_error").load(url);
+	});
+});
+
+$(document).ready(function() 
+{
+	$("#bill_lname").keyup(function(event) 
+	{
+		var queryString = $("#bill_lname").prop("value");
+		var url = "http://localhost:8080/CSE336_Assignment_7/ValidationServlet?input3=" + queryString;
+		$("#lname_error").load(url);
+	});
+});
+
+$(document).ready(function() 
+{
+	$("#bill_addr1").keyup(function(event) 
+	{
+		var queryString = $("#bill_addr1").prop("value");
+		var url = "http://localhost:8080/CSE336_Assignment_7/ValidationServlet?input4=" + queryString;
+		$("#addr1_error").load(url);
+	});
+});
+
+$(document).ready(function() 
+{
+	$("#bill_city").keyup(function(event) 
+	{
+		var queryString = $("#bill_city").prop("value");
+		var url = "http://localhost:8080/CSE336_Assignment_7/ValidationServlet?input5=" + queryString;
+		$("#city_error").load(url);
+	});
+});
+		
+$(document).ready(function() 
+{
+	$("#bill_zip").keyup(function(event) 
+	{
+		var queryString = $("#bill_zip").prop("value");
+		var url = "http://localhost:8080/CSE336_Assignment_7/ValidationServlet?input6=" + queryString;
+		$("#zip_error").load(url);
+	});
+});
+
+$(document).ready(function() 
+{
+	$("#work_tel").keyup(function(event) 
+	{
+		var queryString = $("#work_tel").prop("value");
+		var url = "http://localhost:8080/CSE336_Assignment_7/ValidationServlet?input7=" + queryString;
+		$("#tel_error").load(url);
+	});
+});
+</script>
+
+</head>
+
+
+<body>
+
+<p class="first"><img src="Mets Ticket Information Request Form   mets.com  Tickets_files/nym.png" alt=""><p>
+
+<div id="mc_container">
+	<div id="mc">
+        <br>
+        
+<p class="second">Thank you for your request for additional Mets information. Please fill out and submit the form below. A Mets representative will contact you within one business day. We look forward to seeing you at Citi Field!</p>
+
+<p class="second">During the offseason, the Mets Ticket office is open Monday through Friday from 9:00am until 5:30pm. </p>
+
+<p class="disclaimer center">Please note that all fields marked with an asterisk (<span class="red">*</span>) are required.</p>
+
+<p align="center" id="email_error"> </p>
+<p align="center" id="fname_error"> </p>
+<p align="center" id="lname_error"> </p>
+<p align="center" id="addr1_error"> </p>
+<p align="center" id="city_error"> </p>
+<p align="center" id="zip_error"> </p>
+<p align="center" id="tel_error"> </p>
+
+<form name="nym_2011_ticket_info_request" id="nym_2011_ticket_info_request" action="MetsServlet" method="get">
+
+<table width="581" border="0" cellpadding="0" cellspacing="3" class="textSm">
+    <tbody>
+    <tr><td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="118" height="1" alt=""></td>
+		<td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="165" height="1" alt=""></td>
+		<td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="118" height="1" alt=""></td>
+		<td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="165" height="1" alt=""></td>
+        </tr>
+
+	<tr valign="top">
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> First Name</td>
+		<td><input id="bill_fname" type="text" name="bill_fname" value="" size="25"></td>
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> Last Name</td>
+		<td><input id="bill_lname" type="text" name="bill_lname" value="" size="25"></td>
+	</tr>
+
+	<tr valign="top">
+		<td class="pad3" align="right">Company Name</td>
+		<td><input type="text" name="company_name" value="" size="25"></td>
+		<td class="pad3" align="right">Contact's Name</td>
+		<td><input type="text" name="contact_name" value="" size="25"></td>
+	</tr>
+
+	<tr valign="top">
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> Address</td>
+		<td><input id="bill_addr1" type="text" name="bill_addr1" value="" size="25"></td>
+		<td class="pad3" align="right">Address 2</td>
+		<td><input type="text" name="bill_addr2" value="" size="25"></td>
+	</tr>
+    
+	<tr valign="top">
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> City</td>
+		<td><input id="bill_city" type="text" name="bill_city" value="" size="25"></td>
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> State/Province</td>
+		<td>
+		<select name="bill_state" size="1">
+			<option value="">- Select One ----------</option>
+			<option value="CA">CA - California</option>
+			<option value="MA">MA - Massachusetts</option>
+			<option value="NY">NY - New York</option>
+			<option value="PA">PA - Pennsylvania</option>
+			<option value="NA">Non-US</option>
+		</select>
+		</td>
+	</tr>
+
+	<tr valign="top">
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> Zip/Postal Code</td>
+		<td><input id="bill_zip" type="text" name="bill_zip" value="" size="25"></td>
+
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> Country</td>
+		<td>
+		<select name="bill_country" size="1">
+			<option value="">- Select One ----------</option>
+			<option value="US">United States</option>
+			<option value="CA">Canada</option>
+			<option value="GB">United Kingdom</option>
+		</select>
+		</td>
+	</tr>
+    </tbody>
+</table>
+
+
+<table width="581" border="0" cellpadding="0" cellspacing="3" class="textSm">
+	<tbody>
+    <tr>
+    <td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="116" height="1" alt="" ></td>
+	<td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="165" height="1" alt="" ></td>
+	<td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="116" height="1" alt="" ></td>
+	<td><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="165" height="1" alt="" ></td>
+     </tr>
+				
+	<tr valign="top">
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> Day Phone</td>
+		<td align="left"><input id="work_tel" type="text" name="work_tel" value="" size="25"></td>
+		<td class="pad3" align="right">Evening Phone</td>
+		<td align="left"> <input type="text" name="home_tel" value="" size="25"></td>
+	</tr>
+
+	<tr valign="top">
+		<td class="pad3" align="right">Mobile Phone</td>
+		<td colspan="3" align="left">
+		<input type="text" name="mobile_tel" value="" size="25">
+        
+		<br><br>
+		<input type="checkbox" name="mobile_opt" value="yes"> Enter your mobile phone information to receive text messages &amp; updates from mets.com and MLB.com (Optional, if checked, 'Mobile Phone' must be provided). Msg&amp;Data Rates may Apply. Reply <strong>"Stop"</strong> to cancel. Text <strong>"Help"</strong> or email <a href="mailto:mlb-mobile-cs@mlb.com">mlb-mobile-cs@mlb.com</a> for assistance. Expect 1-2 messages per week.<br><br>
+		</td>
+	</tr>
+
+	<tr valign="top">
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> Birth Date</td>
+		<td colspan="3" align="left">
+		<select name="birth_mon">
+			<option value="">- mm -</option>
+			<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
+		</select> 
+        <select name="birth_day">
+			<option value="">- dd -</option>
+			<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+		</select> 
+        <select name="birth_year">
+			<option value="">- yyyy -</option>
+			<option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option>
+		</select><br>
+
+		</td>
+	</tr>
+
+	<tr valign="top">
+		<td class="pad3" align="right"><span class="red"><b>*</b></span> E-mail Address</td>
+		<td colspan="3" align="left"><input id="email_addr" type="text" name="email_addr" value="" size="25"></td>
+	</tr>
+	<tr valign="top">
+		<td class="pad3" align="right">&nbsp;</td>
+		<td colspan="3" align="left"><input type="checkbox" name="email_opt" value="yes">&nbsp;I would like to receive commercial e-mails from mets.com and MLB.com.</td>
+	</tr>
+	</tbody>
+</table>
+
+
+<table width="649" border="0" cellpadding="0" cellspacing="3" class="textSm">
+	<tbody>
+    <tr>
+    <td width="151"><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="118" height="1" alt="" ></td>
+	<td width="165"><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="165" height="1" alt="" ></td>
+	<td width="132"><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="118" height="1" alt="" ></td>
+	<td width="186"><img src="./Mets Ticket Information Request Form   mets.com  Tickets_files/trans.gif" width="165" height="1" alt="" ></td>
+    </tr>
+    
+	<tr valign="top">
+		<td class="pad3" align="right">&nbsp;</td>
+		<td colspan="3">
+		<span class="red">*</span> &nbsp;<strong>About how many Mets games did you attend in 2012:</strong><br>
+		<select name="num_attended" size="1">
+			<option value="">- Select One ------------------</option>
+			<option value="0">0</option>
+			<option value="1-5">1-5</option>
+			<option value="6-10">6-10</option>
+			<option value="11-20">11-20</option>
+			<option value="21-40">21-40</option>
+			<option value="41-81">41-81</option>
+		</select><br><br>		
+		<span class="red">*</span> &nbsp;<strong>I would like more information about:</strong><br>
+		<input type="checkbox" name="more_info" value="Group Tickets" > Group Tickets<br>
+			<input type="checkbox" name="more_info" value="Season Tickets" > Season Tickets <br>
+			<input type="checkbox" name="more_info" value="Individual game tickets" > Individual game tickets<br>
+			<input type="checkbox" name="more_info" value="Ticket Plans" > Ticket Plans <br>
+			<input type="checkbox" name="more_info" value="Suites" > Suites<br>
+			<input type="checkbox" name="more_info" value="Group Hospitality Areas" > Group Hospitality Areas<br>
+			<input type="checkbox" name="more_info" value="Mets Gift Certificates" > Mets Gift Certificates<br>
+		&nbsp;<br><br>		
+		<span class="red">*</span> &nbsp;<strong>How would you like to be contacted?</strong><br>
+		<select name="how_contact" size="1">
+			<option value="">- Select One ------------------</option>
+			<option value="email">By E-mail</option>
+			<option value="phone">By Phone</option>
+			<option value="mail">By Mail</option>
+		</select><br><br>		
+		&nbsp;<strong>Comments:</strong><br>
+		<textarea cols="50" rows="5" name="comments" id="comments"></textarea>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<div class="second" style="font-size:11px;">
+    &nbsp;<br>
+    
+	<input type="button" name="reset" value=" Reset " class="btnGrey" onclick="window.location='index.html'" onmouseover="this.className=&#39;btnGreyOn&#39;" onmouseout="this.className=&#39;btnGrey&#39;" >&nbsp;&nbsp;
+    <input type="submit" id="submitButton" name="submitButton" value=" Submit " class="btnGreen" onmouseover="this.className=&#39;btnGreenOn&#39;" onmouseout="this.className=&#39;btnGreen&#39;" ><br>
+	&nbsp;<br>
+</div>
+
+</form>
+	
+	</div>
+</div>
+
+</body>
+</html>

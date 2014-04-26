@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT customer (name,company,address,phonenumber, birthday, email_addr, email_opt, how_many, more_info, how_contact, comments)>
+<!ELEMENT name (first, last)>
+<!ELEMENT first (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT address (street1, street2*, city, zip, state, country)>
+<!ELEMENT street1 (#PCDATA)>
+<!ELEMENT street2 (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT California (#PCDATA)>
+<!ELEMENT Massachusetts (#PCDATA)>
+<!ELEMENT NewYork (#PCDATA)>
+<!ELEMENT Pennsylvania (#PCDATA)>
+<!ELEMENT Non-US (#PCDATA)>
+<!ELEMENT state (California|Massachusetts|NewYork|Pennsylvania|Non-US)>
+<!ELEMENT US (#PCDATA)>
+<!ELEMENT Canada (#PCDATA)>
+<!ELEMENT UK (#PCDATA)>
+<!ELEMENT country (US|Canada|UK)>
+<!ELEMENT phonenumber (day, evening, mobile?)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT evening (#PCDATA)>
+<!ELEMENT mobile (#PCDATA)>
+<!ELEMENT birthday (mm, dd, yyyy)>
+<!ELEMENT mm (#PCDATA)>
+<!ELEMENT dd (#PCDATA)>
+<!ELEMENT yyyy (#PCDATA)>
+<!ELEMENT email_addr (#PCDATA)>
+<!ELEMENT checked (#PCDATA)>
+<!ELEMENT unchecked (#PCDATA)>
+<!ELEMENT email_opt (checked|unchecked)>
+<!ELEMENT zero (#PCDATA)>
+<!ELEMENT more_1 (#PCDATA)>
+<!ELEMENT more_6 (#PCDATA)>
+<!ELEMENT more_11 (#PCDATA)>
+<!ELEMENT more_21 (#PCDATA)>
+<!ELEMENT more_41 (#PCDATA)>
+<!ELEMENT how_many (zero|more_1|more_6|more_11|more_21|more_41)>
+<!ELEMENT more_info (group, season, ticket_plans, individual)>
+<!ELEMENT group (checked|unchecked)>
+<!ELEMENT season (checked|unchecked)>
+<!ELEMENT ticket_plans (checked|unchecked)>
+<!ELEMENT individual (checked|unchecked)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+<!ELEMENT how_contact (email|phone|mail)>
+<!ELEMENT comments (#PCDATA)>
+
+<!ENTITY zero "0">
+<!ENTITY more_1 "1-5">
+<!ENTITY more_6 "6-10">
+<!ENTITY more_11 "11-20">
+<!ENTITY more_21 "21-40">
+<!ENTITY more_41 "41-81">
+
+<!ENTITY checked "checked">
+<!ENTITY unchecked "unchecked">
+
+<!ENTITY email "E-Mail">
+<!ENTITY phone "Phone">
+<!ENTITY mail "Mail">
+
+<!ENTITY California "CA">
+<!ENTITY Massachusetts "MA">
+<!ENTITY NewYork "NY">
+<!ENTITY Pennsylvania "PA">
+<!ENTITY Non-US "NA">
+
+<!ENTITY US "US">
+<!ENTITY Canada "CA">
+<!ENTITY UK "UK">
